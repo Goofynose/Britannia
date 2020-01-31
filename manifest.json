@@ -1,0 +1,24 @@
+{
+"manifest_version": 2,
+    "name": "Rule Britannia",
+    "description": "The Queen's English.",
+    "version": "0.2",
+	"author": "Victor Alegiani Sagnotti",
+	"icons": { 	"16": "icons/icon16.png",
+				"48": "icons/icon48.png",
+				"128": "icons/icon128.png" },
+	"browser_action": {
+          "default_popup": "popup.html"
+        },				
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end" 
+        }
+    ]
+}
